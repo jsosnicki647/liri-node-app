@@ -32,18 +32,32 @@ function spotifyThis(){
         }
     }
 
-
     spotify.search({type: "track", query: song})
     .then(function(response){
-        var artist = response.tracks.items[0].album.artists[0].name
-        var album = response.tracks.items[0].album.name
-        var previewURL = response.tracks.items[0].preview_url
-        console.log("---------------")
-        console.log(artist)
-        console.log(song)
-        console.log(previewURL)
-        console.log(album)
-        console.log("---------------")
+        if(response.tracks.items.length == 0){
+            console.log("---------------")
+            console.log("Ace of Base")
+            console.log("The sign")
+            console.log("https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=7373e40052d6425eac5ae5d83381a438")
+            console.log("The Sign (US Album) [Remastered]")
+            console.log("---------------")
+        }
+        else{
+            for(p=0; p<response.tracks.items.length; p++){
+                for(q=0; q< response.tracks.items[p].album.artists.length; q++){
+                    var artist = response.tracks.items[p].album.artists[q].name
+                    var name = response.tracks.items[p].name
+                    var album = response.tracks.items[p].album.name
+                    var previewURL = response.tracks.items[p].preview_url
+                    console.log("---------------")
+                    console.log(artist)
+                    console.log(name)
+                    console.log(previewURL)
+                    console.log(album)
+                    console.log("---------------")
+                }
+            }
+        }
     })
 }
 
