@@ -10,6 +10,8 @@ var arg = process.argv
 var func = arg[2]
 var params = ""
 
+
+
 for(var i=3; i<arg.length; i++){
     if(i == 3){
         params = arg[3]
@@ -41,23 +43,12 @@ switch(func){
         console.log("do-what-it-says")
 }
 
+function writeToLog(data){
+    fs.appendFile('log.txt', data, (err) => {
+        if (err) throw err
+    })
+}
 
-
-
-
-
-// if(func == "concert-this"){
-//     concertThis(params)
-// }
-// else if(func == "spotify-this-song"){
-//     spotifyThis(params)
-// }
-// else if(func == "movie-this"){
-//     movieThis(params)
-// }
-// else if (func == "do-what-it-says"){
-//     doWhatItSays()
-// }
 
 function doWhatItSays(){
     fs.readFile("random.txt", "utf8", function(error, data) {
@@ -106,22 +97,26 @@ function movieThis(movie){
                 }
             }
 
-            console.log("---------------")
-            console.log("Title: " + title)
-            console.log("Year: " + year)
-            console.log("IMDB Rating: " + imdbRating)
-            console.log("Rotten Tomatoes Rating: " + rtRating)
-            console.log("Country: " + country)
-            console.log("Language: " + lang)
-            console.log("Plot: " + plot)
-            console.log("Actors: " + actors)
-            console.log("---------------")
+            var output = {
+                top: "---------------",
+                title: "Title: " + title,
+                year: "Year: " + year,
+                imdb: "IMDB Rating: " + imdbRating,
+                rt: "Rotten Tomatoes Rating: " + rtRating,
+                country: "Country: " + country,
+                lang: "Language: " + lang,
+                plot: "Plot: " + plot,
+                actors: "Actors: " + actors,
+                bottom:"---------------",
+            }
+
+            writeToLog("\n\n" + getCurrentTime() + "; movie-this: " + movie) 
+            iterateOutput(output)
         }
     )
 }
 
 function spotifyThis(song){
-
     spotify.search({type: "track", query: song})
     .then(function(response){
         if(response.tracks.items.length == 0){
@@ -139,17 +134,42 @@ function spotifyThis(song){
                     var name = response.tracks.items[i].name
                     var album = response.tracks.items[i].album.name
                     var previewURL = response.tracks.items[i].preview_url
-                    console.log("---------------")
-                    console.log("Artist: " + artist)
-                    console.log("Song Title: " + name)
-                    console.log("Preview: " + previewURL)
-                    console.log("Album: " + album)
-                    console.log("---------------")
+
+                    var output = {
+                        top: "---------------",
+                        artist: "Artist: " + artist,
+                        songTitle: "Song Title: " + name,
+                        preview: "Preview: " + previewURL,
+                        album: "Album: " + album,
+                        bottom:"---------------",
+                    }
+                    
+                    writeToLog("\n\n" + getCurrentTime() + "; spotify-this-song: " + song) 
+                    iterateOutput(output)
                 }
             }
         }
     })
 }
+
+function getCurrentTime(){
+    var today = new Date()
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+    return (date + " @ " + time)
+}
+
+function iterateOutput(output){
+    var values = Object.values(output)
+    for(var i=0; i<values.length; i++){
+        console.log(values[i])
+        if(i != 0 && i != values.length-1){
+            writeToLog("\n" + values[i])
+        }
+    }
+}
+
+
 
 function concertThis(artist){
     var artist = artist.split(" ").join("")
@@ -187,3 +207,5 @@ function concertThis(artist){
             }
         })
 }
+
+
