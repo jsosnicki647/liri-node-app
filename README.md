@@ -19,7 +19,7 @@ output: concert-this will return the following information about upcoming tour d
 
 *$ node liri.js concert-this [movie title]*
 
-output: movie-this will return the following for the movie:
+output: movie-this will return the following information for the movie:
 * Title
 * Year
 * IMDB Rating
@@ -46,4 +46,5 @@ output: spotify-this-song will return the following information about the song:
 output: do-what-it-says runs all commands listed in random.txt stored in the same directory. Run Multiple commands by saving command and input separated by a comma.
 
 random.txt: *command, input, command, input,...*
+<br>
 e.g.: *movie-this, The Matrix, spotify-this-song, I Want It That Way, concert-this, Bruce Springsteen*
