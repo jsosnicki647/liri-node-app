@@ -48,15 +48,18 @@ function doWhatItSays(){
         }
 
         var dataArr = data.split(",");
-        
-        if(dataArr[0] == "concert-this"){
-            concertThis(dataArr[1])
-        }
-        else if(dataArr[0] == "spotify-this-song"){
-            spotifyThis(dataArr[1])
-        }
-        else if(dataArr[0] == "movie-this"){
-            movieThis(dataArr[1])
+
+        for(var i=0; i<dataArr.length; i++){
+            
+            if(dataArr[i] == "concert-this"){
+                concertThis(dataArr[i+1])
+            }
+            else if(dataArr[i] == "spotify-this-song"){
+                spotifyThis(dataArr[i+1])
+            }
+            else if(dataArr[i] == "movie-this"){
+                movieThis(dataArr[i+1])
+            }
         }
     })
 }
@@ -142,7 +145,7 @@ function spotifyThis(song){
 
 function concertThis(artist){
     var artist = artist.split(" ").join("")
-    console.log(artist)
+
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function(response) {
             var venueArr = []
