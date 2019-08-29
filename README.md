@@ -39,16 +39,6 @@ output: spotify-this-song will return the following information about the song:
 * Preview Link
 * Album
 
-## spotify-this-song
-
-*$ node liri.js spotify-this-song [song title]*
-
-output: spotify-this-song will return the following information about the song:
-* Artist
-* Song Title
-* Preview Link
-* Album
-
 ## do-what-it-says
 
 *$ node liri.js do-what-it-says*
