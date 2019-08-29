@@ -50,17 +50,18 @@ function doWhatItSays(){
         var dataArr = data.split(",");
 
         for(var i=0; i<dataArr.length; i++){
-            
-            if(dataArr[i] == "concert-this"){
-                concertThis(dataArr[i+1])
-            }
-            else if(dataArr[i] == "spotify-this-song"){
-                spotifyThis(dataArr[i+1])
-            }
-            else if(dataArr[i] == "movie-this"){
-                movieThis(dataArr[i+1])
+            switch(dataArr[i]){
+                case "concert-this":
+                    concertThis(dataArr[i+1])
+                    break
+                case "movie-this":
+                    movieThis(dataArr[i+1])
+                    break
+                case "spotify-this-song":
+                    spotifyThis(dataArr[i+1])
             }
         }
+
     })
 }
 
@@ -70,7 +71,7 @@ function movieThis(movie){
     }
 
     axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movie)
-    .then(function(response) {
+    .then((response) => {
             var title = response.data.Title
             var year = response.data.Year
             var imdbRating = response.data.imdbRating
@@ -79,30 +80,33 @@ function movieThis(movie){
             var plot = response.data.Plot
             var actors = response.data.Actors
 
-            for(var i=0; i<response.data.Ratings.length; i++){
-                if(response.data.Ratings[i].Source == "Rotten Tomatoes"){
-                    var rtRating = response.data.Ratings[i].Value
+            try{
+                for(var i=0; i<response.data.Ratings.length; i++){
+                    if(response.data.Ratings[i].Source == "Rotten Tomatoes"){
+                        var rtRating = response.data.Ratings[i].Value
+                    }
+                    else if(i == response.data.Ratings.length){
+                        var rtRating = "N/A"
+                    }
                 }
-                else if(i == response.data.Ratings.length){
-                    var rtRating = "N/A"
+
+                var output = {
+                    top: "---------------",
+                    title: "Title: " + title,
+                    year: "Year: " + year,
+                    imdb: "IMDB Rating: " + imdbRating,
+                    rt: "Rotten Tomatoes Rating: " + rtRating,
+                    country: "Country: " + country,
+                    lang: "Language: " + lang,
+                    plot: "Plot: " + plot,
+                    actors: "Actors: " + actors,
+                    bottom:"---------------",
                 }
-            }
 
-            var output = {
-                top: "---------------",
-                title: "Title: " + title,
-                year: "Year: " + year,
-                imdb: "IMDB Rating: " + imdbRating,
-                rt: "Rotten Tomatoes Rating: " + rtRating,
-                country: "Country: " + country,
-                lang: "Language: " + lang,
-                plot: "Plot: " + plot,
-                actors: "Actors: " + actors,
-                bottom:"---------------",
+                writeToLog("\n\n" + getCurrentTime() + "; movie-this: " + movie) 
+                iterateOutput(output)
             }
-
-            writeToLog("\n\n" + getCurrentTime() + "; movie-this: " + movie) 
-            iterateOutput(output)
+            catch(err){console.log("Movie not found.")}
         }
     )
 }
@@ -111,6 +115,7 @@ function spotifyThis(song){
     spotify.search({type: "track", query: song})
     .then(function(response){
         if(response.tracks.items.length == 0){
+            console.log("DEFAULT SONG")
             console.log("---------------")
             console.log("Artist: Ace of Base")
             console.log("Song Title: The sign")
@@ -148,32 +153,35 @@ function concertThis(artist){
 
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function(response) {
-            var venueArr = []
             var loc, name, ven
-            for(var i=0; i<response.data.length; i++){
-                var venObj ={}
-                var m = moment(response.data[i].datetime).format("L")
-                ven = response.data[i].venue
-                name = ven.name
-                
-                if(ven.region == ""){
-                    loc = ven.city + ", " + ven.country
-                }
-                else{
-                    loc = ven.city + ", " + ven.region + ", " + ven.country
-                }
-                
-                var output= {
+            
+            try{
+                for(var i=0; i<response.data.length; i++){
+                    var venObj ={}
+                    var m = moment(response.data[i].datetime).format("L")
+                    ven = response.data[i].venue
+                    name = ven.name
+                    
+                    if(ven.region == ""){
+                        loc = ven.city + ", " + ven.country
+                    }
+                    else{
+                        loc = ven.city + ", " + ven.region + ", " + ven.country
+                    }
+                    
+                    var output= {
                         top: "---------------",
                         date: "Date: " + m,
                         venue: "Venue: " + name,
                         location: "Location: " + loc,
                         bottom:"---------------",
+                    }
+                    
+                    writeToLog("\n\n" + getCurrentTime() + "; concert-this: " + artist) 
+                    iterateOutput(output)
                 }
-                
-                writeToLog("\n\n" + getCurrentTime() + "; concert-this: " + artist) 
-                iterateOutput(output)
             }
+            catch(err){console.log("Artist not found.")}
         })
 }
 
@@ -186,8 +194,10 @@ function getCurrentTime(){
 
 function iterateOutput(output){
     var values = Object.values(output)
+
     for(var i=0; i<values.length; i++){
         console.log(values[i])
+        
         if(i != 0 && i != values.length-1){
             writeToLog("\n" + values[i])
         }
