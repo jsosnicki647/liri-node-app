@@ -10,60 +10,79 @@ var arg = process.argv
 var func = arg[2]
 var params = ""
 
-for(t=3; t<arg.length; t++){
-    if(t == 3){
-        params = params + arg[3]
+for(var i=3; i<arg.length; i++){
+    if(i == 3){
+        params = arg[3]
     }
     else{
-        params = params + " " + arg[t]
+        params = params + " " + arg[i]
     }
 }
 
-if(func == "concert-this"){
-    concertThis(params)
+switch(func){
+    case "concert-this":
+        concertThis(params)
+        break
+    case "movie-this":
+        movieThis(params)
+        break
+    case "spotify-this-song":
+        spotifyThis(params)
+        break
+    case "do-what-it-says":
+        doWhatItSays()
+        break
+    default:
+        console.log("Invalid command.")
+        console.log("valid commands:")
+        console.log("concert-this")
+        console.log("movie-this")
+        console.log("spotify-this-song")
+        console.log("do-what-it-says")
 }
-else if(func == "spotify-this-song"){
-    spotifyThis(params)
-}
-else if(func == "movie-this"){
-    movieThis(params)
-}
-else if (func == "do-what-it-says"){
-    doWhatItSays()
-}
+
+
+
+
+
+
+// if(func == "concert-this"){
+//     concertThis(params)
+// }
+// else if(func == "spotify-this-song"){
+//     spotifyThis(params)
+// }
+// else if(func == "movie-this"){
+//     movieThis(params)
+// }
+// else if (func == "do-what-it-says"){
+//     doWhatItSays()
+// }
 
 function doWhatItSays(){
     fs.readFile("random.txt", "utf8", function(error, data) {
 
-    // If the code experiences any errors it will log the error to the console.
-    if (error) {
-        return console.log(error);
-    }
+        if (error) {
+            return console.log(error);
+        }
 
-    // We will then print the contents of data
-    console.log(data);
-
-    // Then split it by commas (to make it more readable)
-    var dataArr = data.split(",");
-
-    // We will then re-display the content as an array for later use.
-    console.log(dataArr);
-    if(dataArr[0] == "concert-this"){
-        concertThis()
-    }
-    else if(dataArr[0] == "spotify-this-song"){
-        spotifyThis()
-    }
-    else if(dataArr[0] == "movie-this"){
-        movieThis()
-    }
-
+        var dataArr = data.split(",");
+        
+        if(dataArr[0] == "concert-this"){
+            concertThis(dataArr[1])
+        }
+        else if(dataArr[0] == "spotify-this-song"){
+            spotifyThis(dataArr[1])
+        }
+        else if(dataArr[0] == "movie-this"){
+            movieThis(dataArr[1])
+        }
     })
 }
 
 
 function movieThis(movie){
-    if(arg.length == 3){
+    if(arg.length == 2){
         movie = "Mr. Nobody"
     }
 
@@ -78,11 +97,11 @@ function movieThis(movie){
             var plot = response.data.Plot
             var actors = response.data.Actors
 
-            for(s=0; s<response.data.Ratings.length; s++){
-                if(response.data.Ratings[s].Source == "Rotten Tomatoes"){
-                    var rtRating = response.data.Ratings[s].Value
+            for(var i=0; i<response.data.Ratings.length; i++){
+                if(response.data.Ratings[i].Source == "Rotten Tomatoes"){
+                    var rtRating = response.data.Ratings[i].Value
                 }
-                else if(s == response.data.Ratings.length){
+                else if(i == response.data.Ratings.length){
                     var rtRating = "N/A"
                 }
             }
@@ -114,12 +133,12 @@ function spotifyThis(song){
             console.log("---------------")
         }
         else{
-            for(p=0; p<response.tracks.items.length; p++){
-                for(q=0; q< response.tracks.items[p].album.artists.length; q++){
-                    var artist = response.tracks.items[p].album.artists[q].name
-                    var name = response.tracks.items[p].name
-                    var album = response.tracks.items[p].album.name
-                    var previewURL = response.tracks.items[p].preview_url
+            for(var i=0; i<response.tracks.items.length; i++){
+                for(var q=0; q< response.tracks.items[i].album.artists.length; q++){
+                    var artist = response.tracks.items[i].album.artists[q].name
+                    var name = response.tracks.items[i].name
+                    var album = response.tracks.items[i].album.name
+                    var previewURL = response.tracks.items[i].preview_url
                     console.log("---------------")
                     console.log("Artist: " + artist)
                     console.log("Song Title: " + name)
@@ -134,16 +153,16 @@ function spotifyThis(song){
 
 function concertThis(artist){
     var artist = artist.split(" ").join("")
-
+    console.log(artist)
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(
         function(response) {
             var venueArr = []
             var loc, name, ven
-            for(j=0; j<response.data.length; j++){
+            for(var i=0; i<response.data.length; i++){
                 var venObj ={}
-                var m = moment(response.data[j].datetime).format("L")
-                ven = response.data[j].venue
+                var m = moment(response.data[i].datetime).format("L")
+                ven = response.data[i].venue
                 name = ven.name
                 
                 if(ven.region == ""){
@@ -159,11 +178,11 @@ function concertThis(artist){
                 venueArr.push(venObj)
             }
 
-            for(k=0; k<venueArr.length; k++){
+            for(var i=0; i<venueArr.length; i++){
                 console.log("---------------")
-                console.log("Date: " + venueArr[k].date)
-                console.log("Venue: " + venueArr[k].name)
-                console.log("Location: " + venueArr[k].location)
+                console.log("Date: " + venueArr[i].date)
+                console.log("Venue: " + venueArr[i].name)
+                console.log("Location: " + venueArr[i].location)
                 console.log("---------------")
             }
         })
