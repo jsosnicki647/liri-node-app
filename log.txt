@@ -369,3 +369,360 @@ Country: USA
 Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
 Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
 Language: English
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/11/2019
+Location: Mesa, AZ, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Mesa Arts Center
+Location: Los Angeles, CA, United States
+Date: 09/12/2019
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Yost Theater
+Venue: Hollywood Palladium
+Location: Santa Ana, CA, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Love Field
+Location: Point Reyes Station, CA, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/14/2019
+Venue: Fox Theater
+Date: 09/13/2019
+Location: Oakland, CA, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Crest Theatre
+Date: 09/17/2019
+Location: Sacramento, CA, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/19/2019
+Location: Salt Lake City, UT, United States
+Venue: The Depot
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Ogden Theatre
+Date: 09/20/2019
+Location: Denver, CO, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/21/2019
+Date: 09/16/2019
+Venue: Boulder Theater
+Location: Boulder, CO, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/22/2019
+Venue: Taos Mesa Brewing
+Location: El Prado, NM, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 09/23/2019
+Venue: Yucca Theatre
+Location: Midland, TX, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/10/2019
+Venue: The Mill & Mine
+Location: Knoxville, TN, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/11/2019
+Venue: The Ritz
+Location: Raleigh, NC, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/12/2019
+Venue: Starland Ballroom
+Location: Sayreville, NJ, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/13/2019
+Venue: Knockdown Center
+Location: Queens County, NY, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/14/2019
+Venue: Asbury Hall Babeville
+Location: Buffalo, NY, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/16/2019
+Venue: Cathedral Theatre at the Masonic Temple
+Location: Detroit, MI, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/17/2019
+Venue: Castle Theatre
+Location: Bloomington, IL, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/18/2019
+Venue: The Sylvee
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/19/2019
+Venue: Palace Theatre
+Location: St. Paul, MN, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/20/2019
+Venue: Codfish Hollow Barnstormers
+Location: Maquoketa, IA, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/22/2019
+Venue: The Bourbon
+Location: Lincoln, NE, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/23/2019
+Venue: Liberty Hall
+Location: Lawrence, KS, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 10/24/2019
+Venue: The Criterion
+Location: Oklahoma City, OK, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: White Oak Music Hall
+Date: 10/25/2019
+Location: Houston, TX, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Venue: Longhorn Ballroom
+Location: Madison, WI, United States
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Location: Dallas, TX, United States
+Venue: Aula Magna
+Date: 02/01/2020
+Date: 10/26/2019
+Location: Lisbon, Portugal
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/02/2020
+Venue: Sala Riviera
+Location: Madrid, Spain
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/03/2020
+Venue: Sala Barts
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Location: Barcelona, Spain
+Date: 02/05/2020
+Venue: Teatro Duse
+Location: Bologna, Italy
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/06/2020
+Venue: Fabrique
+Location: Milan, Italy
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/08/2020
+Venue: Salle de l'Alhambra (Antigel Festival)
+Location: Geneva, Switzerland
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/09/2020
+Venue: La Cigale
+Location: Paris, France
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/11/2020
+Venue: De La Warr Pavilion
+Location: Bexhill On Sea, United Kingdom
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/12/2020
+Venue: The Glasgow Royal Concert Hall
+Location: Glasgow, United Kingdom
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/13/2020
+Venue: Vicar Street
+Location: Dublin 8, Ireland
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/14/2020
+Venue: Albert Hall
+Location: Manchester, United Kingdom
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 02/15/2020
+Venue: Eventim Apollo
+Location: London, United Kingdom
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 04/26/2020
+Venue: De Roma
+Location: Antwerp, Belgium
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 04/27/2020
+Venue: Capitole Ghent
+Location: Gent, Belgium
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 04/29/2020
+Venue: Rote fabrik - Aktionshalle
+Location: Zürich, Switzerland
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 04/30/2020
+Venue: E-Werk
+Location: Cologne, Germany
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 05/01/2020
+Venue: TivoliVredenberg Grote Zaal
+Location: Utrecht, Netherlands
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 05/03/2020
+Venue: Huxleys Neue Welt
+Location: Berlin, Germany
+
+2019-8-29 @ 12:8:40; concert-this: explosionsinthesky
+Date: 05/04/2020
+Venue: Fabrik
+Location: Hamburg, Germany
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Backstreet Boys
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=7373e40052d6425eac5ae5d83381a438
+Artist: Backstreet Boys
+Album: The Hits--Chapter One
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Preview: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=7373e40052d6425eac5ae5d83381a438
+Song Title: I Want It That Way
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: Millennium
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/f8181f66713983fab073e133e23c741acbe00d75?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: I Want It That Way
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/4a163fbfa2dbbe4433f277e0e7395dca656364f5?cid=7373e40052d6425eac5ae5d83381a438
+Artist: Mick Jensen
+Album: Covers Part IV
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Song Title: I Want It That Way - Reimagined
+Artist: Backstreet Boys
+Preview: https://p.scdn.co/mp3-preview/7f612d6ba66571500e981e74bb36e14b9906be77?cid=7373e40052d6425eac5ae5d83381a438
+Album: I Want It That Way (Reimagined)
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Anthem Lights
+Song Title: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Preview: https://p.scdn.co/mp3-preview/e217ea111ab84a777f204252fce4b18d5de3ae80?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: Poodle Hat
+Artist: "Weird Al" Yankovic
+Song Title: I Want It That Way
+Album: Punk Goes Pop
+Preview: null
+Artist: Punk Goes
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Preview: https://p.scdn.co/mp3-preview/cc50bfee8d34ec92fda4109243c7ef0e6856f185?cid=7373e40052d6425eac5ae5d83381a438
+Artist: Jess and Gabriel
+Song Title: I Want It That Way
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Steel Panther
+Album: Under the Covers, Vol. 3
+Album: I Want It That Way
+Song Title: I Want It That Way
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Song Title: I Want It That Way
+Artist: Various Artists
+Preview: https://p.scdn.co/mp3-preview/2f96341eb8415a3efb27375db1c4d59928408c2f?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Preview: null
+Album: 90 Sweet 90s Hits!
+Song Title: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+Preview: https://p.scdn.co/mp3-preview/3aa63b5c98b98ae333e567813e5c720abb2914f0?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+Artist: Glee Cast
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=7373e40052d6425eac5ae5d83381a438
+Album: NKOTBSB
+Artist: NKOTBSB
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Preview: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=7373e40052d6425eac5ae5d83381a438
+Artist: New Kids On The Block
+Album: NKOTBSB
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Backstreet Boys
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Scary Pockets
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/33685e005149d5e7d0199a764163ff77f7762e29?cid=7373e40052d6425eac5ae5d83381a438
+Album: NKOTBSB
+Song Title: I Want It That Way
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: Nu Funk
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/764f1dcb8c9a9cec099cc361cb388f931bf023d3?cid=7373e40052d6425eac5ae5d83381a438
+Album: Cover Sessions, Vol. 2
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/ed9bd0373718a854f14712fd722d65ca4b2468c1?cid=7373e40052d6425eac5ae5d83381a438
+Artist: Boyce Avenue
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: CaryLamb
+Album: Boulevard You
+Preview: https://p.scdn.co/mp3-preview/cdde86f49ca4ef217ac08bbbb0c6295c16f015b0?cid=7373e40052d6425eac5ae5d83381a438
+Song Title: I Want It That Way
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Album: I Want It That Way
+Artist: Scott Bradlee's Postmodern Jukebox
+Preview: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=7373e40052d6425eac5ae5d83381a438
+Artist: Manuel Costa
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: "Weird Al" Yankovic
+Song Title: I Want It That Way
+Song Title: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Preview: https://p.scdn.co/mp3-preview/5632d8e302d70afaa8f79c962aa4b2032a45b3ef?cid=7373e40052d6425eac5ae5d83381a438
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Artist: Yshop
+Album: The Essential "Weird Al" Yankovic
+Song Title: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/8d1287b933d37b96943a5041ebcd46c328c9a0ce?cid=7373e40052d6425eac5ae5d83381a438
+Album: Selfies on Kodachrome
+
+2019-8-29 @ 12:11:25; spotify-this-song: i want it that way
+Song Title: I Want It That Way
+Album: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/4722ade5be55bf642f5cc9578b94c092a0fcf3a7?cid=7373e40052d6425eac5ae5d83381a438
+Album: #90s Update
+Artist: #90s Update

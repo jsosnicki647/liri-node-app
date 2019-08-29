@@ -10,8 +10,6 @@ var arg = process.argv
 var func = arg[2]
 var params = ""
 
-
-
 for(var i=3; i<arg.length; i++){
     if(i == 3){
         params = arg[3]
@@ -43,16 +41,8 @@ switch(func){
         console.log("do-what-it-says")
 }
 
-function writeToLog(data){
-    fs.appendFile('log.txt', data, (err) => {
-        if (err) throw err
-    })
-}
-
-
 function doWhatItSays(){
     fs.readFile("random.txt", "utf8", function(error, data) {
-
         if (error) {
             return console.log(error);
         }
@@ -71,15 +61,13 @@ function doWhatItSays(){
     })
 }
 
-
 function movieThis(movie){
     if(arg.length == 2){
         movie = "Mr. Nobody"
     }
 
     axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movie)
-    .then(
-        function(response) {
+    .then(function(response) {
             var title = response.data.Title
             var year = response.data.Year
             var imdbRating = response.data.imdbRating
@@ -143,13 +131,47 @@ function spotifyThis(song){
                         album: "Album: " + album,
                         bottom:"---------------",
                     }
-                    
+
                     writeToLog("\n\n" + getCurrentTime() + "; spotify-this-song: " + song) 
                     iterateOutput(output)
                 }
             }
         }
     })
+}
+
+function concertThis(artist){
+    var artist = artist.split(" ").join("")
+    console.log(artist)
+    axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
+    .then(function(response) {
+            var venueArr = []
+            var loc, name, ven
+            for(var i=0; i<response.data.length; i++){
+                var venObj ={}
+                var m = moment(response.data[i].datetime).format("L")
+                ven = response.data[i].venue
+                name = ven.name
+                
+                if(ven.region == ""){
+                    loc = ven.city + ", " + ven.country
+                }
+                else{
+                    loc = ven.city + ", " + ven.region + ", " + ven.country
+                }
+                
+                var output= {
+                        top: "---------------",
+                        date: "Date: " + m,
+                        venue: "Venue: " + name,
+                        location: "Location: " + loc,
+                        bottom:"---------------",
+                }
+                
+                writeToLog("\n\n" + getCurrentTime() + "; concert-this: " + artist) 
+                iterateOutput(output)
+            }
+        })
 }
 
 function getCurrentTime(){
@@ -169,43 +191,10 @@ function iterateOutput(output){
     }
 }
 
-
-
-function concertThis(artist){
-    var artist = artist.split(" ").join("")
-    console.log(artist)
-    axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
-    .then(
-        function(response) {
-            var venueArr = []
-            var loc, name, ven
-            for(var i=0; i<response.data.length; i++){
-                var venObj ={}
-                var m = moment(response.data[i].datetime).format("L")
-                ven = response.data[i].venue
-                name = ven.name
-                
-                if(ven.region == ""){
-                    loc = ven.city + ", " + ven.country
-                }
-                else{
-                    loc = ven.city + ", " + ven.region + ", " + ven.country
-                }
-                
-                venObj["name"] = name
-                venObj["location"] = loc
-                venObj["date"] = m
-                venueArr.push(venObj)
-            }
-
-            for(var i=0; i<venueArr.length; i++){
-                console.log("---------------")
-                console.log("Date: " + venueArr[i].date)
-                console.log("Venue: " + venueArr[i].name)
-                console.log("Location: " + venueArr[i].location)
-                console.log("---------------")
-            }
-        })
+function writeToLog(data){
+    fs.appendFile('log.txt', data, (err) => {
+        if (err) throw err
+    })
 }
 
 
